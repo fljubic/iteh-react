@@ -2,8 +2,9 @@ import React from "react";
 import { BiPlusMedical } from "react-icons/bi";
 import { BsDash } from "react-icons/bs";
 
-function OneProduct() {
+function OneProduct(props) {
   const stil = { margin: 1 + "em", borderStyle: "dotted" };
+  console.log(props);
   return (
     <div className="card" style={stil}>
       <img
@@ -12,8 +13,8 @@ function OneProduct() {
         alt="Neka slika"
       />
       <div className="card-body">
-        <h3 className="card-title">Product name</h3>
-        <p className="card-text">This is description of the products.</p>
+        <h3 className="card-title">{props.product.title}</h3>
+        <p className="card-text">{props.product.description}</p>
       </div>
       <button className="btn">
         <BiPlusMedical />
