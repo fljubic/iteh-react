@@ -5,6 +5,9 @@ import Products from "./components/Products";
 import { Home } from "./components/Home";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import brojanica from "./components/images/brojanica2.jpeg";
+import ikona from "./components/images/ikona.jpg";
+import krstic from "./components/images/krstic.jpg";
 
 function App() {
   // const prom = <h3>Cao svima</h3>;
@@ -14,24 +17,30 @@ function App() {
   const [products] = useState([
     {
       id: 1,
-      title: "Chocolate",
+      title: "Бројаница",
       description:
-        "Chocolate is a food made from cacao beans. It is used in many desserts like pudding, cakes and candy",
+        "Плетена бројаница за руку са металним крстићем, плаве боје.",
       amount: 0,
+      price: "350,00 рсд",
+      image: brojanica,
     },
     {
       id: 2,
-      title: "Lollypop",
+      title: "Урамљена славска икона",
       description:
-        "Lollipops are available in a number of colors and flavors, particularly fruit flavors.",
+        "Славска икона Свети Никола, у златном раму.",
       amount: 0,
+      price: "5.000,00 рсд",
+      image: ikona,
     },
     {
       id: 3,
-      title: "Ice Cream",
+      title: "Дрвени крстић за врат",
       description:
-        "Ice cream is a sweetened frozen food typically eaten as a snack or dessert.",
+        "Дрвени крстић са занимљивом шаром",
       amount: 0,
+      price: "150,00 рсд",
+      image: krstic,
     },
   ]);
   function refreshCart() {

@@ -11,13 +11,15 @@ function OneProduct({ product, onAdd, inCart }) {
   return (
     <div className={inCart === 1 ? "card" : "card-cart"} style={stil}>
       <img
-        className={inCart === 1 ? "card-img-top" : "card-img-left"}
-        src="https:/picsum.photos/200"
+        className={inCart === 1 ? "card-img-top product-image" : "card-img-left product-image"}
+        src={product.image}
         alt="Neka slika"
       />
       <div className="card-body">
+        {/* <img src={product.image} alt="Neka slika" /> */}
         <h3 className="card-title">{product.title}</h3>
         <p className="card-text">{product.description}</p>
+        <p className="card-price">{product.price}</p>
       </div>
       {inCart === 1 ? (
         <>
@@ -32,7 +34,7 @@ function OneProduct({ product, onAdd, inCart }) {
           </button>
         </>
       ) : (
-        <h4>Amount: {product.amount}</h4>
+        <h4>Количина: {product.amount}</h4>
       )}
     </div>
   );
