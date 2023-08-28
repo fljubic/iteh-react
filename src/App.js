@@ -1,14 +1,17 @@
 import "./App.css";
+import Cart from "./components/Cart";
 import NavBar from "./components/NavBar";
 import Products from "./components/Products";
+import { Home } from "./components/Home";
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   // const prom = <h3>Cao svima</h3>;
   // let cartNum = 0;
   const [cartNum, setCartNum] = useState(0);
-
-  const products = [
+  const [cartProducts, setCartProducts] = useState([]);
+  const [products] = useState([
     {
       id: 1,
       title: "Chocolate",
@@ -30,16 +33,34 @@ function App() {
         "Ice cream is a sweetened frozen food typically eaten as a snack or dessert.",
       amount: 0,
     },
-  ];
-  function addProduct(title){
+  ]);
+  function refreshCart() {
+    let newProducts = products.filter((prod) => prod.amount > 0);
+    setCartProducts(newProducts);
+  }
+  function addProduct(title, id) {
     console.log("Dodat je proizvod: " + title);
     setCartNum(cartNum + 1);
+    products.forEach((prod) => {
+      if (prod.id === id) {
+        prod.amount++;
+      }
+    });
+    refreshCart();
   }
+
   return (
-    <div className="App">
+    <BrowserRouter className="App">
       <NavBar cartNum={cartNum}></NavBar>
-      <Products products={products} onAdd={addProduct}/>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/products"
+          element={<Products products={products} onAdd={addProduct} />}
+        />
+        <Route path="/cart*" element={<Cart products={cartProducts} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

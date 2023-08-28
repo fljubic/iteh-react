@@ -1,34 +1,66 @@
 .navBar {
   display: flex;
-  flex-direction: row;
-  background-color: rgb(211, 211, 211);
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: rgb(175, 175, 175);
+  justify-content: space-between;
   align-items: center;
+  background-color: rgb(211, 211, 211);
+  border-bottom: 2px solid rgb(175, 175, 175);
   min-height: 40px;
-  padding-left: 25px;
+  padding: 0 25px;
   font-size: large;
 }
 
-.cart-items {
+.nav-link {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.divider {
+  width: 10px;
+}
+
+.cart-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  margin-left: 20px;
+}
+
+.cart-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .cart-num {
-  background-color: grey;
+  background-color: #007bff;
   color: white;
-  border-radius: 5px;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 5px;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-weight: bold;
 }
+
+.cart-link:hover {
+  color: #0056b3;
+}
+
+.cart-num:hover {
+  background-color: #0056b3;
+}
+
+.left-links {
+  display: flex;
+  align-items: center;
+}
+
+.right-links {
+  display: flex;
+  align-items: center;
+}
+
 
 .all-products {
   display: flex;
@@ -87,4 +119,70 @@ a {
 .card-img-left {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.home-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./components/images/pozadina.jpg');
+  background-size: cover;
+  filter: opacity(0.5);
+}
+
+.content {
+  text-align: center;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.home-link {
+  margin-left: auto;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.home-link:hover {
+  background-color: #0056b3;
 }

@@ -12,7 +12,9 @@ const Products = ({ products, onAdd }) => {
   return (
     <div className="all-products">
       {products.map((prod) => {
-        return <OneProduct product={prod} key={prod.id} onAdd={onAdd}/>
+        return (
+          <OneProduct product={prod} key={prod.id} onAdd={onAdd} inCart={1} />
+        );
       })}
       {/* <OneProduct product={products[0]} />
       <OneProduct product={products[1]} />
