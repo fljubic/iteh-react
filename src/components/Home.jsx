@@ -8,7 +8,7 @@ export const Home = () => {
       <div className="background-img"></div>
       <div className="content">
         <h1>Добродошли на наш сајт!</h1>
-        <h3>Неки опис</h3>
+        <h3>Нудимо вам црквене производе по најповољнијим ценама!</h3>
         <Link to="/products" className="btn">Погледајте наше производе</Link>
       </div>
     </div>

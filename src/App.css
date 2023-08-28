@@ -194,6 +194,7 @@ p {
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
+  overflow-y: auto;
 }
 
 .form-group {
@@ -248,4 +249,24 @@ label {
   object-fit: cover; /* Ensures the image fits within the defined dimensions */
   border: 1px solid #ddd; /* Add any border styling you want */
   /* Add any other styling you want here */
+}
+
+
+.success-message {
+  color: green;
+  font-weight: bold;
+}
+
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("./components/images/pozadina.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: Arial, sans-serif; 
+  
 }

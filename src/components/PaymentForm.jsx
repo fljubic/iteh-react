@@ -6,6 +6,7 @@ const PaymentForm = ({ onConfirm }) => {
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,13 +17,16 @@ const PaymentForm = ({ onConfirm }) => {
       paymentMethod,
     };
     onConfirm(formData);
+    setPaymentSuccess(true);
   };
 
   return (
-    
     <div className="payment-form">
-        <h3>Детаљи плаћања</h3>
-        <form>
+      <h3>Детаљи плаћања</h3>
+      {paymentSuccess ? (
+        <p className="success-message">Плаћање успешно завршено!</p>
+      ) : (
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="firstName">Име:</label>
             <TextBox
@@ -69,7 +73,8 @@ const PaymentForm = ({ onConfirm }) => {
           </div>
           <button className="btn">Потврди плаћање</button>
         </form>
-      </div>
+      )}
+    </div>
   );
 };
 
