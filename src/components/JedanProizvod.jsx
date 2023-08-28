@@ -2,7 +2,7 @@ import React from "react";
 import { BiPlusMedical } from "react-icons/bi";
 import { BsDash } from "react-icons/bs";
 
-function OneProduct({ product, onAdd, inCart }) {
+function OneProduct({ product, onAdd, izbaci, inCart }) {
   const stil = { margin: 1 + "em", borderStyle: "dotted" };
   // console.log(props);
   // function onAdd(title) {
@@ -11,7 +11,11 @@ function OneProduct({ product, onAdd, inCart }) {
   return (
     <div className={inCart === 1 ? "card" : "card-cart"} style={stil}>
       <img
-        className={inCart === 1 ? "card-img-top product-image" : "card-img-left product-image"}
+        className={
+          inCart === 1
+            ? "card-img-top product-image"
+            : "card-img-left product-image"
+        }
         src={product.image}
         alt="Neka slika"
       />
@@ -29,7 +33,10 @@ function OneProduct({ product, onAdd, inCart }) {
           >
             <BiPlusMedical />
           </button>
-          <button className="btn">
+          <button
+            className="btn"
+            onClick={() => izbaci(product.title, product.id)}
+          >
             <BsDash />
           </button>
         </>

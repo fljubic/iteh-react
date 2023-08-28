@@ -1,6 +1,6 @@
 import React from "react";
-import OneProduct from "./OneProduct";
-import PaymentForm from "./PaymentForm";
+import OneProduct from "./JedanProizvod";
+import PaymentForm from "./FormaPlacanje";
 
 const Cart = ({ products }) => {
 

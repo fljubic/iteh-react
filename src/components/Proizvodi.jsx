@@ -1,7 +1,7 @@
 import React from "react";
-import OneProduct from "./OneProduct";
+import OneProduct from "./JedanProizvod";
 
-const Products = ({ products, onAdd }) => {
+const Products = ({ products, onAdd, izbaci }) => {
   // const name = "Naziv proizvoda";
   // const desc = "Ovo je malo duzi opis proizvoda.";
   // const product = {
@@ -13,7 +13,7 @@ const Products = ({ products, onAdd }) => {
     <div className="all-products shared-background">
       {products.map((prod) => {
         return (
-          <OneProduct product={prod} key={prod.id} onAdd={onAdd} inCart={1} />
+          <OneProduct product={prod} key={prod.id} onAdd={onAdd} izbaci={izbaci} inCart={1} />
         );
       })}
     </div>
