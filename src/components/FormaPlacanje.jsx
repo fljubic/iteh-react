@@ -71,7 +71,7 @@ const PaymentForm = ({ onConfirm }) => {
               onChange={(e) => setPaymentMethod(e.target.value)}
             />
           </div>
-          <button className="btn">Потврди плаћање</button>
+          <button className="btn btn-primary">Потврди плаћање</button>
         </form>
       )}
     </div>
