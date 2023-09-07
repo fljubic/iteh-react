@@ -1,5 +1,4 @@
 import React from "react";
-import { BiCart } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 function NavBar({ cartNum }) {
