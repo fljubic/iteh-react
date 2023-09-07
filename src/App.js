@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import brojanica from "./components/images/brojanica2.jpeg";
 import ikona from "./components/images/ikona.jpg";
 import krstic from "./components/images/krstic.jpg";
+import torba from "./components/images/torba.jpg";
 
 function App() {
   const [cartNum, setCartNum] = useState(0);
@@ -36,6 +37,14 @@ function App() {
       amount: 0,
       price: "150,00 рсд",
       image: krstic,
+    },
+    {
+      id: 4,
+      title: "Кожна торба",
+      description: "Кожна торба ексклузивне колекције “Мозаик”",
+      amount: 0,
+      price: "16500,00 рсд",
+      image: torba,
     },
   ]);
   function refreshCart() {
@@ -69,7 +78,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/products"
-          element={<Products products={products} onAdd={addProduct} izbaci={izbaciProduct}/>}
+          element={
+            <Products
+              products={products}
+              onAdd={addProduct}
+              izbaci={izbaciProduct}
+            />
+          }
         />
         <Route path="/cart*" element={<Cart products={cartProducts} />} />
       </Routes>

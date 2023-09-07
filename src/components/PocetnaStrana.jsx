@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import './Home.css'; // Kreirajte CSS fajl za stilizaciju
 
 export const Home = () => {
   return (

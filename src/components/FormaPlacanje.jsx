@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import TextBox from "./TextBox"; // Make sure to import TextBox component if needed
-
+import TextBox from "./TextBox";
 const PaymentForm = ({ onConfirm }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");

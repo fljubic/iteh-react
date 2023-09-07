@@ -3,11 +3,8 @@ import OneProduct from "./JedanProizvod";
 import PaymentForm from "./FormaPlacanje";
 
 const Cart = ({ products }) => {
-
   const handlePaymentConfirm = (formData) => {
-    // Ovde se rukuje sa podacima sa forme
     console.log(formData);
-    // Možete ovde postaviti bilo kakav status koji želite da se prikaže nakon potvrđivanja plaćanja
   };
   return (
     <div className="cart-container">
@@ -19,7 +16,7 @@ const Cart = ({ products }) => {
           return <OneProduct product={prod} key={prod.id} inCart={0} />;
         })}
       </div>
-      <PaymentForm onConfirm={handlePaymentConfirm}/>
+      <PaymentForm onConfirm={handlePaymentConfirm} />
     </div>
   );
 };
