@@ -34,7 +34,9 @@ function NavBar({ cartNum }) {
               </Link>
 
               <Link to="/cart" className="cart-link">
-                <p className="cart-num">{cartNum}</p>
+                <p className="cart-num" style={{ marginLeft: 1000 }}>
+                  {cartNum}
+                </p>
               </Link>
             </div>
           </div>

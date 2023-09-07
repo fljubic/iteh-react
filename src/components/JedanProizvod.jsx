@@ -4,10 +4,7 @@ import { BsDash } from "react-icons/bs";
 
 function OneProduct({ product, onAdd, izbaci, inCart }) {
   const stil = { margin: 1 + "em", borderStyle: "dotted" };
-  // console.log(props);
-  // function onAdd(title) {
-  //   console.log("Dodat proizvod: " + title);
-  // }
+
   return (
     <div className={inCart === 1 ? "card" : "card-cart"} style={stil}>
       <img
